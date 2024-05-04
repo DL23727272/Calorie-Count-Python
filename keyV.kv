@@ -1,0 +1,74 @@
+MainScreen:
+    MDScreen:
+
+        MDBottomNavigation:
+            #panel_color: "#eeeaea"
+            selected_color_background: "orange"
+            text_color_active: "lightgrey"
+
+            MDBottomNavigationItem:
+                name: 'screen 1'
+                text: 'Add'
+                icon: 'plus-thick'
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: None
+                    height: "300dp"
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+                    MDTextField:
+                        id: food_name
+                        hint_text: "Food Name"
+                        helper_text: "Enter the name of the food"
+                        helper_text_mode: "on_focus"
+                        size_hint_x: None
+                        width: 200
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+
+
+                    MDTextField:
+                        id: calorie
+                        hint_text: "Calorie"
+                        input_filter: "int"
+                        helper_text: "Enter the calorie count"
+                        helper_text_mode: "on_focus"
+                        size_hint_x: None
+                        width: 200
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+
+                    MDRectangleFlatButton:
+                        text: "Add Food"
+                        on_release: root.add_food()
+                        size_hint_x: None
+                        width: 200
+                        pos_hint: {'center_x': 0.5}
+
+                    MDLabel:
+                        id: status
+                        text: ""
+                        halign: "center"
+                        size_hint_y: None
+                        height: "48dp"
+
+                    MDLabel:
+                        id: total_calories
+                        text: "Total Calories: 0"
+                        halign: "center"
+                        size_hint_y: None
+                        height: "48dp"
+
+            MDBottomNavigationItem:
+                name: 'screen 2'
+                text: 'Food List'
+                icon: 'food'
+
+                ScrollView:
+                    MDLabel:
+                        id: food_list
+                        text: ''
+                        halign: 'center'
+                        markup: True
+
+
+          

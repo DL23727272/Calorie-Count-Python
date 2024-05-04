@@ -1,0 +1,79 @@
+<testApp>:
+    Screen:
+
+        MDBottomNavigation:
+            panel_color: "#1A1919"
+            selected_color_background: "orange"
+            text_color_active: "lightgrey"
+
+            MDBottomNavigationItem:
+                name: 'screen 1'
+                text: 'Login'
+                icon: 'account'
+
+            
+                MDLabel:
+                    text: "MyFitnessPal"
+                    color: "#F8F7F7"
+                    bold: True
+                    font_size: "48dp"
+                    halign: "center"
+                    pos_hint: {'center_y': .79}
+                MDLabel:
+                    id: error_label  
+                    text: ""
+                    color: "#09FF43"
+                    bold: True
+                    font_size: "18dp"
+                    halign: "center"
+                    pos_hint: {'center_y': .72}
+                    
+                MDTextField:
+                    id: Username
+                    hint_text: "Username"
+                    icon_right: "account"
+                    helper_text: "Enter username"
+                    helper_text_mode: "on_focus"
+                    font_size: "20dp"
+                    size_hint_x: .85
+                    pos_hint: {'center_x': .5, 'center_y': .65}
+                    on_text: self.text = self.text.replace(" ", "")
+                    write_tab: False
+
+                MDTextField:
+                    id: Password
+                    hint_text: "Password"
+                    password: True
+                    icon_right: "eye-off"
+                    helper_text: "Enter password"
+                    helper_text_mode: "on_focus"
+                    font_size: "20dp"
+                    size_hint_x: .85
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    on_text: self.text = self.text.replace(" ", "")
+                    write_tab: False
+
+                BoxLayout: 
+                    size_hint: .6, None
+                    height: "30dp"
+                    pos_hint: {'center_x': .5, 'center_y': .3}
+                    spacing: '15dp'
+                    
+                    MDFlatButton:
+                        text: "Sign Up"
+                        font_size: "22dp"
+                        size_hint_x: 1
+                        md_bg_color: "FF5623"
+                        on_release: app.validate_signup()
+                    MDFlatButton:
+                        text: "Log In"
+                        font_size: "22dp"
+                        size_hint_x: 1
+                        md_bg_color: "FF5623"
+                        on_release: app.validate_login()
+            
+
+
+                
+
+            
