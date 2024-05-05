@@ -75,29 +75,51 @@ MainScreen:
                 text: 'info'
                 icon: 'information'
 
-                BoxLayout:
-                    orientation: 'vertical'
-                    size_hint_y: None
-                    height: "300dp"
-                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                MDLabel:
+                    text: 'INFORMATION ABOUT DEVS'
+                    halign: "center"
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    bold: True
+                    
+                MDLabel:
+                    text: 'Mhariz Delarosa Adona'
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": .6}
+                MDLabel:
+                    text: 'Jasmine Joy A. Ferrer'
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": .5}
 
-                    MDLabel:
-                        text: "About developers"
-                        halign: "center"
-                        bold: True
+            MDBottomNavigationItem:
+                name: 'screen 4'
+                text: 'System Info'
+                icon: 'application'
 
-                    MDLabel:
-                        text: "Mhariz Adona"
-                        halign: "center"
-                        bold: True
-                    MDLabel:
-                        text: "Mhariz Adona"
-                        halign: "center"
-                        bold: True
+                MDLabel:
+                    text: 'System Info'
+                    halign: 'center'
+                    halign: "center"
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    bold: True
+                MDLabel:
+                    text: 'Grocery Notes is your handy tool for making shopping lists on the go. With easy list management and quick item entry, never forget a grocery item again.'
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": .6}
 
-                    MDLabel:
-                        text: "This is a calorie count application which keep your calorie intake "
-                        halign: "center"
-                
+            MDBottomNavigationItem:
+                name: 'screen 5'
+                text: 'System Help'
+                icon: 'application-braces-outline'
 
-          
+                MDLabel:
+                    text: 'System Help'
+                    halign: 'center'
+                    halign: "center"
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    bold: True
+                MDLabel:
+                    text: " Need a hand? Check out our Help section for tips on using Grocery Notes efficiently. If you're stuck or have suggestions, drop us a line in the app!"
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": .6}                
+
+            
