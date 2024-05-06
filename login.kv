@@ -3,17 +3,22 @@
 
         MDBottomNavigation:
             panel_color: "#1A1919"
-            selected_color_background: "orange"
+            selected_color_background: "blue"
             text_color_active: "lightgrey"
 
             MDBottomNavigationItem:
                 name: 'screen 1'
-                text: 'My Calories'
-                icon: 'mother-heart'
+                text: 'My FitnessPal'
+                icon: 'run-fast'
 
-            
+                Image:
+                    source: "logo.jpg"
+                    size_hint: None, None
+                    width: "80dp"
+                    height: "80dp"
+                    pos_hint: {'center_x': .5, 'center_y': .9}
                 MDLabel:
-                    text: "MyFitnessPal"
+                    text: "My FitnessPal"
                     color: "#F8F7F7"
                     bold: True
                     font_size: "48dp"

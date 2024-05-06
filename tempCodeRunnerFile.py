@@ -1,1 +1,2 @@
-Window.size = (368, 640)
+subprocess.Popen(["python", "login.py"])
+        os._exit(0)

@@ -3,7 +3,7 @@ MainScreen:
 
         MDBottomNavigation:
             #panel_color: "#eeeaea"
-            selected_color_background: "orange"
+            selected_color_background: "blue"
             text_color_active: "lightgrey"
 
             MDBottomNavigationItem:
@@ -42,7 +42,7 @@ MainScreen:
                         on_release: root.add_food()
                         size_hint_x: None
                         width: 200
-                        pos_hint: {'center_x': 0.5}
+                        pos_hint: {'center_x': 0.5,'center_y': 0.3}
 
                     MDLabel:
                         id: status
@@ -57,6 +57,12 @@ MainScreen:
                         halign: "center"
                         size_hint_y: None
                         height: "48dp"
+                        
+                    MDFloatingActionButton:
+                        icon: "logout"
+                        md_bg_color: "blue"
+                        pos_hint: {"center_x": .9, "center_y": .1}
+                        on_release: app.logout_button()
 
             MDBottomNavigationItem:
                 name: 'screen 2'

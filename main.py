@@ -3,6 +3,8 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 import mysql.connector
 from kivy.core.window import Window
+import subprocess
+import os
 
 db_connection = mysql.connector.connect(
     host="localhost",
@@ -52,7 +54,7 @@ class MainScreen(Screen):
         else:
             self.ids.status.text = "Please enter both food name and calorie."
 
-
+    
 
         
 class MyFitnessPal(MDApp):
@@ -60,7 +62,9 @@ class MyFitnessPal(MDApp):
         self.theme_cls.theme_style = "Light"
         self.theme_cls.primary_palette = "BlueGray"
         return Builder.load_file("keyV.kv")
-
+    def logout_button(self):
+        subprocess.Popen(["python", "login.py"])
+        os._exit(0)
 
 if __name__ == "__main__":
     Window.size = (368, 640)
