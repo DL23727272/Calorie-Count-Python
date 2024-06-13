@@ -1,15 +1,16 @@
-<testApp>:
+MDScreen:
+    name: "login"
     Screen:
 
         MDBottomNavigation:
-            panel_color: "#1A1919"
-            selected_color_background: "blue"
-            text_color_active: "lightgrey"
+            panel_color: "#EAE8E8"
+            selected_color_background: "lightblue"
+            text_color_active: "black"
 
             MDBottomNavigationItem:
                 name: 'screen 1'
                 text: 'My FitnessPal'
-                icon: 'run-fast'
+                icon: 'account-heart'
 
                 Image:
                     source: "logo.jpg"
@@ -19,15 +20,16 @@
                     pos_hint: {'center_x': .5, 'center_y': .9}
                 MDLabel:
                     text: "My FitnessPal"
-                    color: "#F8F7F7"
+                    color: "#484747"
                     bold: True
                     font_size: "48dp"
                     halign: "center"
                     pos_hint: {'center_y': .79}
+
                 MDLabel:
                     id: error_label  
                     text: ""
-                    color: "#09FF43"
+                    color: "#FF0000"
                     bold: True
                     font_size: "18dp"
                     halign: "center"
@@ -64,21 +66,25 @@
                     pos_hint: {'center_x': .5, 'center_y': .3}
                     spacing: '15dp'
                     
-                    MDFlatButton:
+                    MDRectangleFlatIconButton:
                         text: "Sign Up"
+                        icon: "account-edit" 
                         font_size: "22dp"
                         size_hint_x: 1
-                        md_bg_color: "FF5623"
+                        md_bg_color: "lightblue"
                         on_release: app.validate_signup()
-                    MDFlatButton:
+
+                BoxLayout: 
+                    size_hint: .6, None
+                    height: "30dp"
+                    pos_hint: {'center_x': .5, 'center_y': .2}
+                    spacing: '15dp'
+
+                    MDRectangleFlatIconButton:
                         text: "Log In"
+                        icon: "account-check" 
                         font_size: "22dp"
                         size_hint_x: 1
-                        md_bg_color: "FF5623"
+                        md_bg_color: "lightblue"
                         on_release: app.validate_login()
-            
 
-
-                
-
-            
